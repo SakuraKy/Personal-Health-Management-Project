@@ -3,18 +3,13 @@ package com.atsakuraky.sportplay.util;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
-import java.time.Duration;
-
-import static org.springframework.http.CacheControl.maxAge;
 
 /*
  * 全局配置类 —— 解决跨域问题
  */
 
-@MapperScan("com.atsakuraky.sportplay")
+@MapperScan("com.atsakuraky.sportplay.dao")
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
     @Override
@@ -26,5 +21,4 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowCredentials(true) // 允许携带凭证（如Cookie）
                 .maxAge(3600); // 预检请求的缓存时间（秒）
     }
-
 }

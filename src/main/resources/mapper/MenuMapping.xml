@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.demo.mapper.MenuMapping">
+<mapper namespace="com.atsakuraky.sportplay.dao.MenuDao">
     <!-- 一对多关系  关系映射 -->
     <resultMap id="menuMap" type="com.atsakuraky.sportplay.bean.MainMenu">
         <!-- 前面一个对应数据库中的 后面一个对应实体 -->

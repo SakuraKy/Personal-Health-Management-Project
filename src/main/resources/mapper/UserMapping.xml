@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.atsakuraky.sportplay.dao">
-    <select id="getUserByMassage" resultType="com.atsakuraky.sportplay.bean">
-        SELECT * FROM 'easyuser' WHERE username = #{username} AND 'password' = #{password} AND status = 1
+<mapper namespace="com.atsakuraky.sportplay.dao.UserDao">
+    <select id="getUserByMessage" resultType="com.atsakuraky.sportplay.bean.User">
+        SELECT * FROM easyproject.easyuser WHERE username = #{username} AND password = #{password} AND active = 1
     </select>
 </mapper>
