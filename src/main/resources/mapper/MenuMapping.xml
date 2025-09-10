@@ -17,7 +17,10 @@
 
 
     </resultMap>
-    <select id="getMenus" resultType="menuMap">
-        SELECT mm.*, sm.id AS sid, sm.title AS s,stitle sm.path AS spath FROM mainmenu mm ,submenu sm WHERE mm.id = sm.mid;
+    <select id="getMenus" resultMap="menuMap">
+        SELECT mm.*, sm.id AS sid, sm.title AS stitle, sm.path AS spath
+        FROM mainmenu mm, submenu sm
+        WHERE mm.id = sm.mid;
     </select>
+
 </mapper>
